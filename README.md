@@ -1,87 +1,38 @@
-# nebula-dashboard
-
-A smart dashboard for displaying information on a TV/Smart Mirror/Monitor
-
-<!-- Optional -->
-<!-- ![<PROJECT_NAME>](<OG_IMAGE_URL>) -->
-
-<ONE_LINER_PITCH>
-
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/justmalhar/nebula-dashboard?style=social)](../../stargazers)
-
-## What is this?
-
-**nebula-dashboard** is A smart dashboard for displaying information on a TV/Smart Mirror/Monitor.
-
-- ✅ <What it does>
-- ✅ <Who it’s for>
-- ✅ <Why it exists>
-
----
-
-## Features
-
-- **<Feature 1>** — <benefit>
-- **<Feature 2>** — <benefit>
-- **<Feature 3>** — <benefit>
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-### Prerequisites
-- Git installed on your system (Comes default on macOS)
-- GitHub account (for repository access)
+First, run the development server:
 
-
-
-## Usage
-
-### Installation
 ```bash
-# Clone the repository
-git clone https://github.com/justmalhar/nebula-dashboard.git
-cd nebula-dashboard
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-### Setup & Configure
-```
-cd nebula-dashboard
-./setup.sh
-```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Run
-```bash
-# Put the one true command for your project here
-# examples:
-# make dev
-# ./run.sh
-# python -m <module>
-# npm run dev
-<START_COMMAND>
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Contributing
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## Learn More
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+To learn more about Next.js, take a look at the following resources:
 
----
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## About Me
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-Malhar Ujawane
-• Twitter/X: https://x.com/justmalhar
-• LinkedIn: https://linkedin.com/in/justmalhar
-• GitHub: https://github.com/justmalhar
-• Website: https://malharujawane.com
-• Ko-fi: https://ko-fi.com/justmalhar
+## Deploy on Vercel
 
-#### Repo Created with
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-- [Git Repository Setup Automator](https://github.com/justmalhar/git-repo-setup-automator)  
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/justmalhar/reponame&env=TEST_VARIABLE)
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
