@@ -1,15 +1,10 @@
-# nebula-dashboard
+# Nebula Dashboard
 
-A smart cybernetic dashboard for TV displays, providing real-time intel and AI-powered insights.
-
-<!-- Optional -->
+A smart cybernetic dashboard command center for TV displays, providing real-time news, intel and AI-powered insights.
 
 ![nebula-dashboard](demo.png)
 
 Your futuristic command center for daily global intel.
-
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/justmalhar/nebula-dashboard?style=social)](../../stargazers)
 
 ## What is this?
 
@@ -20,7 +15,6 @@ Your futuristic command center for daily global intel.
 - ✅ Exists to transform any display into a high-tech information hub.
 - ✅ Fully Customizable
 - ✅ AI Powered Wisdom - Quotes and Word of the Day
-
 
 ---
 
@@ -78,11 +72,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## About Me
 
 Malhar Ujawane
-• Twitter/X: https://x.com/justmalhar
-• LinkedIn: https://linkedin.com/in/justmalhar
-• GitHub: https://github.com/justmalhar
-• Website: https://malharujawane.com
-• Ko-fi: https://ko-fi.com/justmalhar
+• Twitter/X: [https://x.com/justmalhar](https://x.com/justmalhar)
+• LinkedIn: [https://linkedin.com/in/justmalhar](https://linkedin.com/in/justmalhar)
+• GitHub: [https://github.com/justmalhar](https://github.com/justmalhar)
+• Website: [https://malharujawane.com](https://malharujawane.com)
+• Ko-fi: [https://ko-fi.com/justmalhar](https://ko-fi.com/justmalhar)
 
 #### Repo Created with
 
