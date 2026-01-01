@@ -1,38 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# nebula-dashboard
+
+A smart cybernetic dashboard for TV displays, providing real-time intel and AI-powered insights.
+
+<!-- Optional -->
+
+![nebula-dashboard](demo.png)
+
+Your futuristic command center for daily global intel.
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/justmalhar/nebula-dashboard?style=social)](../../stargazers)
+
+## What is this?
+
+**Nebula Dashboard** is a smart cybernetic dashboard for TV displays, providing real-time intel and AI-powered insights.
+
+- ✅ Provides real-time news, weather, and AI insights in a cyberpunk aesthetic.
+- ✅ Designed for data enthusiasts and fans of futuristic, high-contrast UI/UX.
+- ✅ Exists to transform any display into a high-tech information hub.
+- ✅ Fully Customizable
+- ✅ AI Powered Wisdom - Quotes and Word of the Day
+
+
+---
+
+## Features
+
+- **Global Intel Feed** — Real-time news cycling from international sources.
+- **Wisdom Uplink** — Daily AI-powered quotes and vocabulary enrichment.
+- **Cybernetic UI** — A stunning, futuristic interface designed for ambient displays.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Git installed on your system (Comes default on macOS)
+- GitHub account (for repository access)
+- [Bun](https://bun.sh/) runtime installed
+
+## Usage
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+# Clone the repository
+git clone https://github.com/justmalhar/nebula-dashboard.git
+cd nebula-dashboard
+```
+
+### Setup & Configure
+
+```bash
+cd nebula-dashboard
+./setup.sh
+```
+
+### Run
+
+```bash
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## License
 
-## Learn More
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## About Me
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Malhar Ujawane
+• Twitter/X: https://x.com/justmalhar
+• LinkedIn: https://linkedin.com/in/justmalhar
+• GitHub: https://github.com/justmalhar
+• Website: https://malharujawane.com
+• Ko-fi: https://ko-fi.com/justmalhar
 
-## Deploy on Vercel
+#### Repo Created with
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/justmalhar/reponame&env=TEST_VARIABLE)
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Git Repository Setup Automator](https://github.com/justmalhar/git-repo-setup-automator)
