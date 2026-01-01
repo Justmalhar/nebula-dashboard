@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Rajdhani, Share_Tech_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 const rajdhani = Rajdhani({
   variable: "--font-rajdhani",
@@ -40,6 +41,7 @@ export default function RootLayout({
       >
         <div className="scanline-overlay"></div>
         {children}
+        <Analytics />
       </body>
     </html>
   );
