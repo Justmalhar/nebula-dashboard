@@ -41,7 +41,7 @@ Format the output EXACTLY as JSON:
 }`;
 
         const completion = await openRouter.chat.send({
-            model: 'z-ai/glm-4.5-air:free',
+            model: process.env.OPENROUTER_MODEL,
             messages: [
                 {
                     role: 'user',
