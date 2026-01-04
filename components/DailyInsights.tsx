@@ -11,6 +11,7 @@ export default function DailyInsights() {
     });
     const [isLoading, setIsLoading] = useState(true);
     const [activeInsight, setActiveInsight] = useState<'word' | 'quote'>('word');
+    const [lastSync, setLastSync] = useState<string>("SYNCING...");
 
     useEffect(() => {
         const fetchInsight = async () => {
@@ -35,6 +36,7 @@ export default function DailyInsights() {
                 });
             } finally {
                 setIsLoading(false);
+                setLastSync(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
             }
         };
 
@@ -53,37 +55,33 @@ export default function DailyInsights() {
     }, []);
 
     return (
-        <div className="tech-border p-8 flex flex-col h-full min-h-0 overflow-hidden">
+        <div className="tech-border flex flex-col h-full min-h-0 overflow-hidden" style={{ padding: 'clamp(0.5rem, 1vw, 2rem)' }}>
             <div className="section-header">
                 <i className="fas fa-scroll"></i> <span>WISDOM_UPLINK</span>
             </div>
 
             <div className={`flex-grow flex flex-col justify-center transition-opacity duration-500 ${isLoading ? 'opacity-50' : 'opacity-100'}`}>
                 {activeInsight === 'word' ? (
-                    <div key="word" className="flex flex-col gap-2 border-l-4 border-primary/30 pl-6 py-2 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-                        <div className="text-md text-white font-mono uppercase tracking-[3px] mb-1">WORD_OF_DAY</div>
-                        <div className="text-5xl font-black text-primary tracking-tighter leading-tight">{wisdom.word}</div>
-                        <div className="text-xl text-white font-mono leading-snug italic mt-2">
+                    <div key="word" className="flex flex-col border-primary/30 py-2 animate-in fade-in slide-in-from-bottom-4 duration-1000" style={{ gap: 'clamp(0.125rem, 0.3vw, 0.5rem)', borderLeftWidth: 'clamp(2px, 0.3vw, 4px)', borderLeftStyle: 'solid', paddingLeft: 'clamp(0.5rem, 1vw, 1.5rem)' }}>
+                        <div className="text-white font-mono uppercase" style={{ fontSize: 'clamp(0.5rem, 0.8vw, 0.875rem)', letterSpacing: '0.15em', marginBottom: '0.125rem' }}>WORD_OF_DAY</div>
+                        <div className="font-black text-primary tracking-tighter leading-tight" style={{ fontSize: 'clamp(1.25rem, 2.5vw, 3rem)' }}>{wisdom.word}</div>
+                        <div className="text-white font-mono leading-snug italic" style={{ fontSize: 'clamp(0.625rem, 1vw, 1.25rem)', marginTop: 'clamp(0.125rem, 0.25vw, 0.5rem)' }}>
                             {wisdom.definition}
                         </div>
                     </div>
                 ) : (
-                    <div key="quote" className="flex flex-col gap-4 relative mt-2 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-                        <i className="fas fa-quote-left text-primary/20 text-5xl absolute -top-2 -left-4"></i>
-                        <div className="text-3xl font-black leading-tight uppercase tracking-tight text-foreground pl-10">
+                    <div key="quote" className="-mt-4 flex flex-col relative animate-in fade-in slide-in-from-bottom-4 duration-1000" style={{ gap: 'clamp(0.25rem, 0.5vw, 1rem)', marginTop: '0.5rem' }}>
+                        <i className="fas fa-quote-left text-primary/20 absolute" style={{ fontSize: 'clamp(1.5rem, 3vw, 3rem)', top: '-0.5rem', left: '-0.25rem' }}></i>
+                        <div className="font-black leading-tight uppercase tracking-tight text-foreground" style={{ fontSize: 'clamp(0.875rem, 1.8vw, 1.875rem)', paddingLeft: 'clamp(1.5rem, 2.5vw, 2.5rem)' }}>
                             {isLoading ? "ESTABLISHING_NEURAL_LINK..." : `"${wisdom.quote}"`}
                         </div>
                         {!isLoading && (
-                            <div className="text-right text-md font-mono text-primary font-bold tracking-widest mt-2">
+                            <div className="text-right font-mono text-primary font-bold" style={{ fontSize: 'clamp(0.5rem, 0.8vw, 0.875rem)', letterSpacing: '0.1em', marginTop: 'clamp(0.125rem, 0.25vw, 0.5rem)' }}>
                                 // SOURCE: <span className="text-white">{wisdom.author}</span>
                             </div>
                         )}
                     </div>
                 )}
-            </div>
-
-            <div className="last-updated mt-6 text-white">
-                NEURAL_SYNC: <span className="font-bold">{isLoading ? "BUSY" : "SUCCESSFUL"}</span> // MODE: <span className="font-bold">{activeInsight.toUpperCase()}</span>
             </div>
         </div>
     );

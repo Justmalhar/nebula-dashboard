@@ -114,30 +114,30 @@ export default function Weather() {
     }
 
     return (
-        <div className="tech-border p-6 flex-grow flex flex-col min-h-0 overflow-hidden">
+        <div className="tech-border flex-grow flex flex-col min-h-0 overflow-hidden" style={{ padding: 'clamp(0.75rem, 1.5vw, 1.5rem)' }}>
             <div className="section-header justify-between">
                 <div className="flex items-center">
                     <i className="fas fa-satellite-dish"></i> <span>LOCAL_ENVIRONMENT</span>
                 </div>
-                <div className="text-primary font-black tracking-widest uppercase text-xl">
+                <div className="text-primary font-black uppercase" style={{ fontSize: 'clamp(0.75rem, 1.3vw, 1.25rem)', letterSpacing: '0.1em' }}>
                     {process.env.NEXT_PUBLIC_CITY || "STATION"}
                 </div>
             </div>
-            <div className="flex flex-col items-center py-4 flex-grow justify-between min-h-0">
+            <div className="flex flex-col items-center flex-grow justify-between min-h-0" style={{ paddingTop: 'clamp(0.5rem, 1vw, 1rem)', paddingBottom: 'clamp(0.5rem, 1vw, 1rem)' }}>
                 <div className="flex flex-col items-center justify-center flex-grow">
-                    <div className="text-6xl text-primary mb-4">
+                    <div className="text-primary" style={{ fontSize: 'clamp(2rem, 4vw, 4rem)', marginBottom: 'clamp(0.25rem, 0.5vw, 1rem)' }}>
                         <i className={`fas ${data.current.icon}`}></i>
                     </div>
-                    <div className="text-9xl font-black leading-none tracking-tighter -mt-2">{data.current.temp}°</div>
-                    <div className="text-4xl uppercase tracking-widest text-primary font-black mt-4">
+                    <div className="font-black leading-none tracking-tighter ml-4" style={{ fontSize: 'clamp(3rem, 7vw, 9rem)', marginTop: '-0.125em' }}>{data.current.temp}°</div>
+                    <div className="uppercase text-primary font-black" style={{ fontSize: 'clamp(1rem, 2.5vw, 2.5rem)', letterSpacing: '0.1em', marginTop: 'clamp(0.25rem, 0.5vw, 1rem)' }}>
                         {data.current.condition}
                     </div>
-                    <div className="mt-4 text-3xl font-black bg-neutral-900 px-6 py-2 border border-neutral-700 rounded-sm">
+                    <div className="font-black bg-neutral-900 border border-neutral-700 rounded-sm" style={{ fontSize: 'clamp(0.875rem, 1.5vw, 1.875rem)', marginTop: 'clamp(0.25rem, 0.5vw, 1rem)', padding: 'clamp(0.125rem, 0.3vw, 0.5rem) clamp(0.5rem, 1vw, 1.5rem)' }}>
                         AQI // <span className={typeof data.current.aqi === 'number' && data.current.aqi > 100 ? "text-red-500" : "text-green-500"}>{data.current.aqi}</span>
                     </div>
                 </div>
 
-                <div className="w-full grid grid-cols-2 gap-8 text-2xl text-white border-b-2 border-white-800 pb-6 mb-6 font-bold">
+                <div className="w-full grid grid-cols-2 mt-2 text-white border-b-2 border-white-800 font-bold" style={{ fontSize: 'clamp(0.75rem, 1.3vw, 1.5rem)', gap: 'clamp(0.5rem, 1vw, 2rem)', paddingBottom: 'clamp(0.5rem, 1vw, 1.5rem)', marginBottom: 'clamp(0.5rem, 1vw, 1.5rem)' }}>
                     <div className="flex justify-between">
                         <span>HUMIDITY</span> <span className="text-primary">{data.current.humidity}%</span>
                     </div>
@@ -147,21 +147,20 @@ export default function Weather() {
                 </div>
 
                 <div className="w-full">
-                    <div className="text-white mb-3 uppercase tracking-widest text-2xl">
+                    <div className="text-white uppercase" style={{ fontSize: 'clamp(0.75rem, 1.3vw, 1.5rem)', letterSpacing: '0.1em', marginBottom: 'clamp(0.25rem, 0.5vw, 0.75rem)' }}>
                         T+ Track // Projected
                     </div>
-                    <div className="grid grid-cols-5 gap-3">
+                    <div className="grid grid-cols-5" style={{ gap: 'clamp(0.125rem, 0.3vw, 0.75rem)' }}>
                         {hourlyTrack.map((h, i) => (
-                            <div key={i} className="flex flex-col items-center p-3 border-2 border-white-800 bg-black/50 text-2xl font-black font-mono">
-                                <div className="text-white mb-1">{h.timeLabel}</div>
-                                <i className={`fas ${h.hIcon} text-primary text-4xl my-1`}></i>
-                                <div className="text-4xl text-white">{h.hTemp}°</div>
+                            <div key={i} className="flex flex-col items-center border-2 border-white-800 bg-black/50 font-black font-mono" style={{ padding: 'clamp(0.125rem, 0.4vw, 0.75rem)', fontSize: 'clamp(0.625rem, 1vw, 1.5rem)' }}>
+                                <div className="text-white" style={{ marginBottom: '0.125rem' }}>{h.timeLabel}</div>
+                                <i className={`fas ${h.hIcon} text-primary`} style={{ fontSize: 'clamp(1rem, 2vw, 2.5rem)', margin: '0.125rem 0' }}></i>
+                                <div className="text-white" style={{ fontSize: 'clamp(1rem, 2vw, 2.5rem)' }}>{h.hTemp}°</div>
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
-            <div className="last-updated mt-auto text-lg text-white">LAST SYNC // {data.lastUpdate}</div>
         </div>
     );
 }

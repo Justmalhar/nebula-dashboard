@@ -30,15 +30,15 @@ export default function Calendar() {
     }
 
     return (
-        <div className="tech-border p-6 flex flex-col h-full min-h-0 overflow-hidden">
-            <div className="section-header justify-between">
+        <div className="tech-border flex flex-col h-full min-h-0 overflow-hidden" style={{ padding: 'clamp(0.5rem, 1vw, 1.5rem)' }}>
+            <div className="section-header justify-between text-md">
                 <div><i className="fas fa-calendar-alt"></i> <span>MONTHLY_OUTLOOK</span></div>
             </div>
             <div className="flex-grow flex flex-col justify-center max-w-[95%] mx-auto w-full">
-                <div className="text-3xl font-black text-primary mb-4 text-center tracking-tight">
+                <div className="font-black text-primary text-center tracking-tight" style={{ fontSize: 'clamp(0.875rem, 1.8vw, 1.875rem)', marginBottom: 'clamp(0.25rem, 0.5vw, 1rem)' }}>
                     {currentMonth} {currentYear}
                 </div>
-                <div className="grid grid-cols-7 gap-1 text-center font-mono text-2xl text-white mb-2 font-bold">
+                <div className="grid grid-cols-7 text-center font-mono text-white font-bold" style={{ gap: 'clamp(1px, 0.2vw, 4px)', fontSize: 'clamp(0.625rem, 1.2vw, 1.5rem)', marginBottom: 'clamp(0.125rem, 0.25vw, 0.5rem)' }}>
                     <div>SU</div>
                     <div>MO</div>
                     <div>TU</div>
@@ -47,7 +47,7 @@ export default function Calendar() {
                     <div>FR</div>
                     <div>SA</div>
                 </div>
-                <div className="grid grid-cols-7 gap-1 flex-grow min-h-0 text-2xl font-black">
+                <div className="grid grid-cols-7 flex-grow min-h-0 font-black" style={{ gap: 'clamp(1px, 0.2vw, 4px)' }}>
                     {gridItems}
                 </div>
             </div>

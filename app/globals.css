@@ -75,19 +75,23 @@ body,
   }
 
   .section-header {
-    @apply flex items-center border-b-2 border-primary pb-2 mb-6;
+    @apply flex items-center border-b-2 border-primary pb-2 mb-4;
   }
 
   .section-header i {
-    @apply mr-4 text-primary text-2xl;
+    @apply mr-2 text-primary;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
   }
 
   .section-header span {
-    @apply font-black tracking-[4px] uppercase text-3xl;
+    @apply font-black uppercase;
+    font-size: clamp(0.875rem, 1.8vw, 1.875rem);
+    letter-spacing: clamp(1px, 0.3vw, 4px);
   }
 
   .calendar-day {
-    @apply aspect-square flex items-center justify-center text-xl border border-neutral-800 font-bold;
+    @apply aspect-square flex items-center justify-center border border-neutral-800 font-bold;
+    font-size: clamp(0.75rem, 1.2vw, 1.25rem);
   }
 
   .calendar-day.today {
@@ -95,7 +99,9 @@ body,
   }
 
   .last-updated {
-    @apply text-sm text-neutral-500 mt-auto pt-4 uppercase tracking-wider font-mono font-bold;
+    @apply text-neutral-500 mt-auto pt-4 uppercase font-mono font-bold;
+    font-size: clamp(0.625rem, 1vw, 0.875rem);
+    letter-spacing: 0.1em;
   }
 }
 
